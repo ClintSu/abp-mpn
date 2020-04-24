@@ -4,3 +4,5 @@
 3、EF Core 两种数据库方式常用命令
 Code First: Add-Migration "xxx"   |   update-database
 Db First:   Scaffold-DbContext "Server=localhost;Database=Kf;User ID=sa;Password=1qaz@WSX;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MyContext -UseDatabaseNames -DataAnnotations -Force
+
+4.开发步骤：加入Model, 同步数据库，运行T4，加入ApplicationAutoMapperProfile

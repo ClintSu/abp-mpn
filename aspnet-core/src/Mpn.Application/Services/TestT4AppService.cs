@@ -13,13 +13,9 @@ using Mpn.Models;
 
 namespace Mpn.Services
 {
-    public class TestT4AppService :
-         CrudAppService<TestT4, TestT4Dto, Guid, PagedAndSortedResultRequestDto,
-                             CreateUpdateTestT4Dto, CreateUpdateTestT4Dto>,
-         ITestT4AppService
+    public class TestT4AppService : CrudAppService<TestT4, TestT4Dto, Guid, PagedAndSortedResultRequestDto,CreateUpdateTestT4Dto, CreateUpdateTestT4Dto>,ITestT4AppService
     {
-        public TestT4AppService(IRepository<TestT4, Guid> repository)
-            : base(repository)
+        public TestT4AppService(IRepository<TestT4, Guid> repository) : base(repository)
         {
 
         }

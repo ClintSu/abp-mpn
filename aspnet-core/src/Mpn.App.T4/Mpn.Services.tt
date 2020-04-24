@@ -54,13 +54,9 @@ using Mpn.Models;
 
 namespace Mpn.Services
 {
-    public class <#= fileName#>AppService :
-         CrudAppService<<#= fileName#>, <#= fileName#>Dto, Guid, PagedAndSortedResultRequestDto,
-                             CreateUpdate<#= fileName#>Dto, CreateUpdate<#= fileName#>Dto>,
-         I<#= fileName#>AppService
+    public class <#= fileName#>AppService : CrudAppService<<#= fileName#>, <#= fileName#>Dto, Guid, PagedAndSortedResultRequestDto,CreateUpdate<#= fileName#>Dto, CreateUpdate<#= fileName#>Dto>,I<#= fileName#>AppService
     {
-        public <#= fileName#>AppService(IRepository<<#= fileName#>, Guid> repository)
-            : base(repository)
+        public <#= fileName#>AppService(IRepository<<#= fileName#>, Guid> repository) : base(repository)
         {
 
         }

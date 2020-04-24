@@ -7,13 +7,12 @@ using Volo.Abp.Domain.Repositories;
 using Mpn.IServices;
 using Mpn.Dtos;
 using Mpn.Models;
+using Volo.Abp.Modularity;
 
 namespace Mpn.Services
 {
-    public class BookAppService :
-         CrudAppService<Book, BookDto, Guid, PagedAndSortedResultRequestDto,
-                             CreateUpdateBookDto, CreateUpdateBookDto>,
-         IBookAppService
+    //[DependsOn(typeof(MpnAppService))]
+      public class BookAppService :CrudAppService<Book, BookDto, Guid, PagedAndSortedResultRequestDto, CreateUpdateBookDto, CreateUpdateBookDto>, IBookAppService
     {
         public BookAppService(IRepository<Book, Guid> repository)
             : base(repository)

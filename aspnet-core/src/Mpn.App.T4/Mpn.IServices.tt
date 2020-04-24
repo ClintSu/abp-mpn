@@ -1,0 +1,71 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+
+<#@ include file="$(ProjectDir)ModelAuto.ttinclude"	#>
+
+<# var manager = new Manager(Host, GenerationEnvironment, true); #>
+
+<# 
+	//获取写入路径
+	var projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile+"..")+"..");
+	var outputPath = Path.Combine(projectPath,"Mpn.Application.Contracts\\IServices");
+	if (!Directory.Exists(outputPath))
+	{
+	    Directory.CreateDirectory(outputPath);
+	}
+#>
+
+<#
+	//读取来源Model
+   var modelPath =  Path.Combine(projectPath,"Mpn.Domain\\Models");
+   var modelFiles =  Directory.GetFiles(modelPath, "*.cs"); 
+#>
+
+<# 
+    foreach(var file in modelFiles) 
+    { 
+		//已存在不写入，不存在自动创建
+        var fileName = Path.GetFileNameWithoutExtension(file);
+		if(!File.Exists(Path.Combine(outputPath, "I"+ fileName+"AppService"+".cs")))
+		{ 
+			manager.StartBlock("I"+ fileName+"AppService"+".cs",outputPath);
+		
+#>
+/*
+ * T4自动生成，只生成一次，存在不覆盖
+ */
+using System;
+using System.Collections.Generic;
+using System.Text;
+using Volo.Abp.Application.Dtos;
+using Volo.Abp.Application.Services;
+using Mpn.Dtos;
+using Mpn.Models;
+
+namespace Mpn.IServices
+{
+    public interface I<#= fileName#>AppService :
+         ICrudAppService< //定义了CRUD方法
+             <#= fileName#>Dto, //用来展示
+             Guid, //实体的主键
+             PagedAndSortedResultRequestDto, //获取时候用于分页和排序
+             CreateUpdate<#= fileName#>Dto, //用于创建
+             CreateUpdate<#= fileName#>Dto> //用于更新
+    {
+
+    }
+}
+<# 
+		manager.EndBlock(); 
+        }
+    }
+	manager.Process(true);
+#> 

@@ -1,0 +1,6 @@
+﻿1、当前T4，以Domain层的 Models为驱动，生成符合Abp vNext Applicaion的代码
+2、Model 预定继承 :AuditedAggregateRoot<Guid>
+
+3、EF Core 两种数据库方式常用命令
+Code First: Add-Migration "xxx"   |   update-database
+Db First:   Scaffold-DbContext "Server=localhost;Database=Kf;User ID=sa;Password=1qaz@WSX;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context MyContext -UseDatabaseNames -DataAnnotations -Force

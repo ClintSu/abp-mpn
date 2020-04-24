@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Update="Mpn.Dtos.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Mpn.Dtos.cs</LastGenOutput>
+    </None>
+    <None Update="Mpn.IServices.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Mpn.IServices.cs</LastGenOutput>
+    </None>
+    <None Update="Mpn.Services.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Mpn.Services.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Mpn.Dtos.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Mpn.Dtos.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Mpn.IServices.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Mpn.IServices.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Mpn.Services.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Mpn.Services.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+</Project>

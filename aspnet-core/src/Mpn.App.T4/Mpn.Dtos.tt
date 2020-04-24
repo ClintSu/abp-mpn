@@ -1,0 +1,92 @@
+﻿<#@ template debug="true" hostSpecific="true" #>
+<#@ output extension=".cs" #>
+<#@ Assembly Name="System.Core" #>
+<#@ Assembly Name="System.Windows.Forms" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Diagnostics" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #> 
+
+<#@ include file="$(ProjectDir)ModelAuto.ttinclude"	#>
+
+<# var manager = new Manager(Host, GenerationEnvironment, true); #>
+
+<# 
+	//获取写入路径
+	var projectPath = Path.GetDirectoryName(Path.GetDirectoryName(Host.TemplateFile+"..")+"..");
+	var outputPath = Path.Combine(projectPath,"Mpn.Application.Contracts\\Dtos");
+	if (!Directory.Exists(outputPath))
+	{
+	    Directory.CreateDirectory(outputPath);
+	}
+#>
+
+<#
+	//读取来源Model
+   var modelPath =  Path.Combine(projectPath,"Mpn.Domain\\Models");
+   var modelFiles =  Directory.GetFiles(modelPath, "*.cs"); 
+#>
+
+<# 
+    foreach(var file in modelFiles) 
+    { 
+		//已存在不写入，不存在自动创建
+        var fileName = Path.GetFileNameWithoutExtension(file);
+        var filePath = Path.Combine(outputPath,fileName);
+		if (!Directory.Exists(filePath))
+		{
+			Directory.CreateDirectory(filePath);
+		}
+		if(!File.Exists(Path.Combine(outputPath, fileName+"Dto"+".cs")))
+		{ 
+			manager.StartBlock(fileName + "Dto"+".cs",filePath);
+		
+#>
+/*
+ * T4自动生成，只生成一次，存在不覆盖
+ */
+using System;
+using Volo.Abp.Application.Dtos;
+
+namespace Mpn.Dtos
+{
+    public class <#= fileName#>Dto:AuditedEntityDto<Guid>
+    {
+        //填入字段
+    }
+}
+
+<# 
+		manager.EndBlock(); 
+     }
+#> 
+
+
+<# 
+	if(!File.Exists(Path.Combine(outputPath, "CreateUpdate"+fileName+"Dto"+".cs")))
+	{ 
+		manager.StartBlock("CreateUpdate"+fileName + "Dto"+".cs",filePath);
+#>
+/*
+ * T4自动生成，只生成一次，存在不覆盖
+ */
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Text;
+
+namespace Mpn.Dtos
+{
+    public class CreateUpdate<#= fileName#>Dto
+    {
+       //填入字段
+    }
+}
+<# 
+		manager.EndBlock(); 
+       }
+    }
+	manager.Process(true);
+#> 

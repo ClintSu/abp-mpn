@@ -7,7 +7,6 @@ using System.Text;
 using Volo.Abp.Application.Dtos;
 using Volo.Abp.Application.Services;
 using Mpn.Dtos;
-using Mpn.Models;
 
 namespace Mpn.IServices
 {

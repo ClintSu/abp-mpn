@@ -55,7 +55,6 @@ namespace Mpn.Users
          * schema change to the database.
          */
 
-
         /// <summary>
         /// <summary>
         /// <summary>
@@ -74,7 +73,6 @@ namespace Mpn.Users
         /// 微信
         /// </summary>
         public string WetChat { get; set; }
-
 
 
         private AppUser()

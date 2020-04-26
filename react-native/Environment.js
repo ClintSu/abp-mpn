@@ -1,8 +1,8 @@
 const ENV = {
   dev: {
-    apiUrl: 'http://localhost:44329',
+    apiUrl: 'http://localhost:44323',
     oAuthConfig: {
-      issuer: 'http://localhost:44329',
+      issuer: 'http://localhost:44323',
       clientId: 'Mpn_App',
       clientSecret: '1q2w3e*',
       scope: 'Mpn',
@@ -12,9 +12,9 @@ const ENV = {
     },
   },
   prod: {
-    apiUrl: 'http://localhost:44329',
+    apiUrl: 'http://localhost:44323',
     oAuthConfig: {
-      issuer: 'http://localhost:44329',
+      issuer: 'http://localhost:44323',
       clientId: 'Mpn_App',
       clientSecret: '1q2w3e*',
       scope: 'Mpn',

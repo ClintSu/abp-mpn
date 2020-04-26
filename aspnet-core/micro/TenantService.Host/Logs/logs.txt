@@ -1,0 +1,11 @@
+2020-04-26 15:29:23.034 +08:00 [INF] Starting TenantManagementService.Host.
+2020-04-26 15:29:23.630 +08:00 [FTL] TenantManagementService.Host terminated unexpectedly!
+System.InvalidOperationException: Could not find singleton service: Volo.Abp.Modularity.IModuleContainer, Volo.Abp.Core, Version=2.6.2.0, Culture=neutral, PublicKeyToken=null
+   at Microsoft.Extensions.DependencyInjection.ServiceCollectionCommonExtensions.GetSingletonInstance[T](IServiceCollection services)
+   at Autofac.Extensions.DependencyInjection.AutofacRegistration.Register(ContainerBuilder builder, IServiceCollection services)
+   at Autofac.Extensions.DependencyInjection.AutofacRegistration.Populate(ContainerBuilder builder, IServiceCollection services)
+   at Volo.Abp.Autofac.AbpAutofacServiceProviderFactory.CreateBuilder(IServiceCollection services)
+   at Microsoft.Extensions.Hosting.Internal.ServiceFactoryAdapter`1.CreateBuilder(IServiceCollection services)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at TenantService.Host.Program.Main(String[] args) in D:\B-Study\Abp\Mpn\aspnet-core\micro\TenantService.Host\Program.cs:line 46

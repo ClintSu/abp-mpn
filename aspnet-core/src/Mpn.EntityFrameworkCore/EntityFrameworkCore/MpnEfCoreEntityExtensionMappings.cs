@@ -32,10 +32,12 @@ namespace Mpn.EntityFrameworkCore
                  * https://docs.abp.io/en/abp/latest/Customizing-Application-Modules-Extending-Entities
                  */
 
-                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("IdCard",b=>b.HasMaxLength(20));
-                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("Address", b=>b.HasMaxLength(256));
-                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("DingTalk", b=>b.HasMaxLength(64));
-                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("WetChat", b=>b.HasMaxLength(64));
+
+
+                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("IdCard", b => b.HasMaxLength(20));
+                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("Address", b => b.HasMaxLength(256));
+                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("DingTalk", b => b.HasMaxLength(64));
+                ObjectExtensionManager.Instance.MapEfCoreProperty<IdentityUser, string>("WetChat", b => b.HasMaxLength(64));
             });
         }
     }

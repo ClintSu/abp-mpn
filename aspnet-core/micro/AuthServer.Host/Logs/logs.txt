@@ -1,0 +1,22 @@
+2020-04-26 20:38:14.467 +08:00 [INF] Starting AuthServer.Host.
+2020-04-26 20:38:16.843 +08:00 [FTL] AuthServer.Host terminated unexpectedly!
+System.IO.FileNotFoundException: Could not load file or assembly 'Serilog.Sinks.RollingFile, Culture=neutral, PublicKeyToken=null'. 系统找不到指定的文件。
+File name: 'Serilog.Sinks.RollingFile, Culture=neutral, PublicKeyToken=null'
+   at System.Reflection.RuntimeAssembly.nLoad(AssemblyName fileName, String codeBase, RuntimeAssembly assemblyContext, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.RuntimeAssembly.InternalLoadAssemblyName(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef, StackCrawlMark& stackMark, AssemblyLoadContext assemblyLoadContext)
+   at System.Reflection.Assembly.Load(AssemblyName assemblyRef)
+   at Serilog.Settings.Configuration.ConfigurationReader.LoadConfigurationAssemblies(IConfigurationSection section, AssemblyFinder assemblyFinder)
+   at Serilog.Settings.Configuration.ConfigurationReader..ctor(IConfigurationSection configSection, AssemblyFinder assemblyFinder, IConfiguration configuration)
+   at Serilog.ConfigurationLoggerConfigurationExtensions.Configuration(LoggerSettingsConfiguration settingConfiguration, IConfiguration configuration, String sectionName, DependencyContext dependencyContext)
+   at Serilog.ConfigurationLoggerConfigurationExtensions.Configuration(LoggerSettingsConfiguration settingConfiguration, IConfiguration configuration, DependencyContext dependencyContext)
+   at AuthServer.Host.Program.<>c.<CreateHostBuilder>b__1_1(HostBuilderContext ctx, LoggerConfiguration config) in D:\B-Study\Abp\Mpn\aspnet-core\micro\AuthServer.Host\Program.cs:line 63
+   at Serilog.SerilogHostBuilderExtensions.<>c__DisplayClass1_0.<UseSerilog>b__0(HostBuilderContext context, IServiceCollection collection)
+   at Microsoft.Extensions.Hosting.HostBuilder.CreateServiceProvider()
+   at Microsoft.Extensions.Hosting.HostBuilder.Build()
+   at AuthServer.Host.Program.Main(String[] args) in D:\B-Study\Abp\Mpn\aspnet-core\micro\AuthServer.Host\Program.cs:line 42
+
+
+2020-04-26 20:38:52.769 +08:00 [INF] Starting AuthServer.Host.
+2020-04-26 20:40:01.944 +08:00 [INF] Starting AuthServer.Host.
+2020-04-26 20:40:41.849 +08:00 [INF] Starting AuthServer.Host.

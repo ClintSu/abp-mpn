@@ -32,7 +32,7 @@ namespace AuthServer.Host
                     {
                         AutoRegisterTemplate = true,
                         AutoRegisterTemplateVersion = AutoRegisterTemplateVersion.ESv6,
-                        IndexFormat = "msdemo-log-{0:yyyy.MM}"
+                        IndexFormat = "mpn-log-{0:yyyy.MM}"
                     })
                 .CreateLogger();
 
@@ -60,6 +60,6 @@ namespace AuthServer.Host
                     webBuilder.UseStartup<Startup>();
                 })
                 .UseAutofac()
-                .UseSerilog();
+                .UseSerilog((ctx, config) => config.ReadFrom.Configuration(ctx.Configuration));
     }
 }

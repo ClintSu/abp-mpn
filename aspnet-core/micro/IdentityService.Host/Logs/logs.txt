@@ -1,0 +1,148 @@
+2020-04-27 10:45:34.128 +08:00 [INF] Starting IdentityService.Host.
+2020-04-27 10:45:40.282 +08:00 [INF] Creating key "199b2389-54ae-4c06-8aac-8f0974943866" with creation date "2020-04-27T02:45:40.2560523+00:00", activation date "2020-04-27T02:45:40.1746553+00:00", and expiration date "2020-07-26T02:45:40.1746553+00:00".
+2020-04-27 10:45:40.315 +08:00 [WRN] No XML encryptor configured. Key "199b2389-54ae-4c06-8aac-8f0974943866" may be persisted to storage in unencrypted form.
+2020-04-27 10:45:40.483 +08:00 [FTL] Application startup exception
+System.Exception: Could not resolve a service of type 'Castle.Core.Logging.ILoggerFactory' for the parameter 'loggerFactory' of method 'Configure' on type 'IdentityService.Host.Startup'.
+ ---> Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'Castle.Core.Logging.ILoggerFactory' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+2020-04-27 10:45:40.564 +08:00 [FTL] IdentityService.Host terminated unexpectedly!
+System.Exception: Could not resolve a service of type 'Castle.Core.Logging.ILoggerFactory' for the parameter 'loggerFactory' of method 'Configure' on type 'IdentityService.Host.Startup'.
+ ---> Autofac.Core.Registration.ComponentNotRegisteredException: The requested service 'Castle.Core.Logging.ILoggerFactory' has not been registered. To avoid this exception, either register a component to provide the service, check for service registration using IsRegistered(), or use the ResolveOptional() method to resolve an optional dependency.
+   at Autofac.ResolutionExtensions.ResolveService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.Resolve(IComponentContext context, Type serviceType)
+   at Autofac.Extensions.DependencyInjection.AutofacServiceProvider.GetRequiredService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.Invoke(Object instance, IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.ConfigureBuilder.<>c__DisplayClass4_0.<Build>b__0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostBuilder.<>c__DisplayClass13_0.<UseStartup>b__2(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Mvc.Filters.MiddlewareFilterBuilderStartupFilter.<>c__DisplayClass0_0.<Configure>g__MiddlewareFilterBuilder|0(IApplicationBuilder builder)
+   at Microsoft.AspNetCore.Server.IIS.Core.IISServerSetupFilter.<>c__DisplayClass2_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.HostFilteringStartupFilter.<>c__DisplayClass0_0.<Configure>b__0(IApplicationBuilder app)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
+   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
+   at IdentityService.Host.Program.Main(String[] args) in D:\B-Study\Abp\Mpn\aspnet-core\micro\IdentityService.Host\Program.cs:line 43
+2020-04-27 10:53:08.743 +08:00 [INF] Starting IdentityService.Host.
+2020-04-27 10:53:12.292 +08:00 [INF] Loaded ABP modules:
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Castle.AbpCastleCoreModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Autofac.AbpAutofacModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.EventBus.AbpEventBusModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Timing.AbpTimingModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Json.AbpJsonModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Threading.AbpThreadingModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.RabbitMQ.AbpRabbitMqModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.EventBus.RabbitMq.AbpEventBusRabbitMqModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.ObjectExtending.AbpObjectExtendingModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Uow.AbpUnitOfWorkModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Data.AbpDataModule
+2020-04-27 10:53:12.293 +08:00 [INF] - Volo.Abp.Security.AbpSecurityModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.MultiTenancy.AbpMultiTenancyModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Auditing.AbpAuditingModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Guids.AbpGuidsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.ObjectMapping.AbpObjectMappingModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Domain.AbpDddDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.AbpEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.EntityFrameworkCore.SqlServer.AbpEntityFrameworkCoreSqlServerModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AuditLogging.AbpAuditLoggingDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AuditLogging.EntityFrameworkCore.AbpAuditLoggingEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationAbstractionsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Authorization.AbpAuthorizationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.VirtualFileSystem.AbpVirtualFileSystemModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Settings.AbpSettingsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Localization.AbpLocalizationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Validation.AbpValidationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Serialization.AbpSerializationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Caching.AbpCachingModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.PermissionManagement.EntityFrameworkCore.AbpPermissionManagementEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.SettingManagement.AbpSettingManagementDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.SettingManagement.AbpSettingManagementDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.SettingManagement.EntityFrameworkCore.AbpSettingManagementEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Users.AbpUsersDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Users.AbpUsersAbstractionModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationContractsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Http.AbpHttpAbstractionsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Features.AbpFeaturesModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Application.AbpDddApplicationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationContractsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationContractsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Minify.AbpMinifyModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Http.AbpHttpModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.UI.AbpUiModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AspNetCore.AbpAspNetCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.ApiVersioning.AbpApiVersioningAbstractionsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcContractsModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AspNetCore.Mvc.AbpAspNetCoreMvcModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.AbpIdentityHttpApiModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Users.AbpUsersDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AutoMapper.AbpAutoMapperModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.AbpIdentityDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Users.EntityFrameworkCore.AbpUsersEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.EntityFrameworkCore.AbpIdentityEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.PermissionManagement.AbpPermissionManagementApplicationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.Identity.AbpIdentityApplicationModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.AspNetCore.MultiTenancy.AbpAspNetCoreMultiTenancyModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.TenantManagement.AbpTenantManagementDomainSharedModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.TenantManagement.AbpTenantManagementDomainModule
+2020-04-27 10:53:12.294 +08:00 [INF] - Volo.Abp.TenantManagement.EntityFrameworkCore.AbpTenantManagementEntityFrameworkCoreModule
+2020-04-27 10:53:12.294 +08:00 [INF] - IdentityService.Host.IdentityServiceHostModule
+2020-04-27 10:53:13.574 +08:00 [INF] Initialized all ABP modules.
+2020-04-27 10:53:13.599 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-04-27 10:53:13.600 +08:00 [INF] Hosting environment: Development
+2020-04-27 10:53:13.600 +08:00 [INF] Content root path: D:\B-Study\Abp\Mpn\aspnet-core\micro\IdentityService.Host
+2020-04-27 10:53:13.629 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/  
+2020-04-27 10:53:13.720 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:16.508 +08:00 [INF] Executing endpoint 'IdentityService.Host.Controllers.HomeController.Index (IdentityService.Host)'
+2020-04-27 10:53:16.623 +08:00 [INF] Route matched with {action = "Index", controller = "Home", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.ActionResult Index() on controller IdentityService.Host.Controllers.HomeController (IdentityService.Host).
+2020-04-27 10:53:16.645 +08:00 [INF] Executing RedirectResult, redirecting to /swagger.
+2020-04-27 10:53:16.652 +08:00 [INF] Executed action IdentityService.Host.Controllers.HomeController.Index (IdentityService.Host) in 22.488ms
+2020-04-27 10:53:16.654 +08:00 [INF] Executed endpoint 'IdentityService.Host.Controllers.HomeController.Index (IdentityService.Host)'
+2020-04-27 10:53:17.342 +08:00 [DBG] Added 0 entity changes to the current audit log
+2020-04-27 10:53:17.342 +08:00 [DBG] Added 0 entity changes to the current audit log
+2020-04-27 10:53:17.379 +08:00 [INF] Request finished in 3753.5007ms 302 
+2020-04-27 10:53:17.380 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger  
+2020-04-27 10:53:17.382 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.412 +08:00 [INF] Request finished in 32.4406ms 301 
+2020-04-27 10:53:17.420 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/index.html  
+2020-04-27 10:53:17.424 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.470 +08:00 [INF] Request finished in 50.2034ms 200 text/html;charset=utf-8
+2020-04-27 10:53:17.488 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/swagger-ui.css  
+2020-04-27 10:53:17.490 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.513 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/swagger-ui-bundle.js  
+2020-04-27 10:53:17.513 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.513 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/swagger-ui-standalone-preset.js  
+2020-04-27 10:53:17.513 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.540 +08:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2020-04-27 10:53:17.540 +08:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2020-04-27 10:53:17.540 +08:00 [INF] Request finished in 51.7066ms 200 text/css
+2020-04-27 10:53:17.540 +08:00 [INF] Request finished in 26.7984ms 200 application/javascript
+2020-04-27 10:53:17.557 +08:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2020-04-27 10:53:17.557 +08:00 [INF] Request finished in 44.2066ms 200 application/javascript
+2020-04-27 10:53:17.725 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/v1/swagger.json  
+2020-04-27 10:53:17.727 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.751 +08:00 [INF] Request starting HTTP/1.1 GET http://localhost:20456/swagger/favicon-32x32.png  
+2020-04-27 10:53:17.752 +08:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2020-04-27 10:53:17.755 +08:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2020-04-27 10:53:17.755 +08:00 [INF] Request finished in 4.1904ms 200 image/png
+2020-04-27 10:53:17.884 +08:00 [INF] Request finished in 158.8571ms 200 application/json;charset=utf-8

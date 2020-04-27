@@ -1,13 +1,14 @@
+using System;
+using System.IO;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using Serilog.Events;
 using Serilog.Sinks.Elasticsearch;
-using System;
-using System.IO;
 
-namespace AuthServer.Host
+
+namespace IdentityService.Host
 {
     public class Program
     {
@@ -24,7 +25,7 @@ namespace AuthServer.Host
                 .MinimumLevel.Debug()
                 .MinimumLevel.Override("Microsoft", LogEventLevel.Information)
                 .MinimumLevel.Override("Microsoft.EntityFrameworkCore", LogEventLevel.Warning)
-                .Enrich.WithProperty("Application", "AuthServer")
+                .Enrich.WithProperty("Application", "IdentityService")
                 .Enrich.FromLogContext()
                 .WriteTo.File("Logs/logs.txt")
                 .WriteTo.Elasticsearch(
@@ -38,13 +39,13 @@ namespace AuthServer.Host
 
             try
             {
-                Log.Information("Starting AuthServer.Host.");
+                Log.Information("Starting IdentityService.Host.");
                 CreateHostBuilder(args).Build().Run();
                 return 0;
             }
             catch (Exception ex)
             {
-                Log.Fatal(ex, "AuthServer.Host terminated unexpectedly!");
+                Log.Fatal(ex, "IdentityService.Host terminated unexpectedly!");
                 return 1;
             }
             finally
@@ -61,7 +62,5 @@ namespace AuthServer.Host
                 })
                 .UseAutofac()
                 .UseSerilog();
-
-         //.UseSerilog((ctx, config) => config.ReadFrom.Configuration(ctx.Configuration));
     }
 }

@@ -49,6 +49,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mpn.Shared", "micro\Mpn.Sha
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthServer.Host", "micro\AuthServer.Host\AuthServer.Host.csproj", "{004D4525-2CD3-4D2D-8E49-B8E4271E9133}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityService.Host", "micro\IdentityService.Host\IdentityService.Host.csproj", "{18977894-4290-48EC-826E-83BAABFA21BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{004D4525-2CD3-4D2D-8E49-B8E4271E9133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{004D4525-2CD3-4D2D-8E49-B8E4271E9133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{004D4525-2CD3-4D2D-8E49-B8E4271E9133}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18977894-4290-48EC-826E-83BAABFA21BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18977894-4290-48EC-826E-83BAABFA21BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18977894-4290-48EC-826E-83BAABFA21BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18977894-4290-48EC-826E-83BAABFA21BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +166,7 @@ Global
 		{79B10264-1227-4F61-A84B-A463DB6C1594} = {CA9AC87F-097E-4F15-8393-4BC07735A5B0}
 		{2FE211D6-4AE7-40FB-8CEE-42CBAE8331FA} = {9F1D777D-D4D9-4B0A-98FB-8070930CD792}
 		{004D4525-2CD3-4D2D-8E49-B8E4271E9133} = {9F1D777D-D4D9-4B0A-98FB-8070930CD792}
+		{18977894-4290-48EC-826E-83BAABFA21BB} = {9F1D777D-D4D9-4B0A-98FB-8070930CD792}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {28315BFD-90E7-4E14-A2EA-F3D23AF4126F}
